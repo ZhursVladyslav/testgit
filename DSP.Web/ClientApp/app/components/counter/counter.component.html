@@ -1,0 +1,21 @@
+<div class="panel panel-info">
+    <div class="panel-heading">Useful Signal Parameters</div>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Amplitude (V)</label>
+                <input type="email" class="form-control" id="ampl" name="ampl" [(ngModel)]="ampl">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Frequency</label>
+                <input type="text" class="form-control" id="freq" name="freq" [(ngModel)]="freq">              
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="getSignal()">Calculate</button>
+        </form>
+    </div>
+</div>
+
+<div id="ch">
+    <chart id="cha" type="bar" [data]="data"></chart>
+</div>
+
